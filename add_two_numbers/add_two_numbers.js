@@ -13,7 +13,6 @@
 
 // for every given node going to grab the value from the first linked list and second linked list and add them together and also add any carry over from the previous input
 // as every single node element only has a single digit number, the highest number we can get is 18 (9 + 9) and the maximum carry over is 1
-// what if we have different length linked lists?
 var addTwoNumbers = function (l1, l2) {
     let head = new ListNode(0)
     let node = head
@@ -36,7 +35,6 @@ var addTwoNumbers = function (l1, l2) {
             // update carry to be 1 max
             carry = 1
         }
-
         // create new linked list node and pass in newValue
         node.next = new ListNode(newValue)
         // update linked list
@@ -57,3 +55,5 @@ var addTwoNumbers = function (l1, l2) {
 
     return head.next
 };
+
+console.log(addTwoNumbers([2,4,3], [5,6,4]))
